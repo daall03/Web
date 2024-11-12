@@ -33,6 +33,8 @@ public class myController {
     private ReportNumberRepository reportNumberRepository;
     @Autowired
     private DependentRepository dependentRepository;
+
+    
     @GetMapping("/") // 메인
     public String home(Model model) {
         String username = (String) model.getAttribute("username");
@@ -211,7 +213,7 @@ public class myController {
     @GetMapping("/purchase-plan")
     public String purchasePlan(Model model) {
         // 페이지 이동
-        return "purchase-plan"; // purchasePlan.jsp로 리턴
+        return "purchase"; 
     }
 
 
